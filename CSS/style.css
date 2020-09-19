@@ -1,0 +1,123 @@
+body {
+  font-family: sans-serif;
+}
+
+header {
+  background-color: #5B191A;
+}
+
+nav {
+  background-color: #0E0D0D;
+  padding: 0.3em;
+}
+
+li {
+  display: inline;
+}
+
+li a {
+  color: white;
+  text-decoration: none;
+  padding-right: 1em;
+}
+
+.sectionheadline {
+  background-color: #C4C4C4;
+  padding: 1em 2em 1em 2em;
+  margin: 1em 1em 1em 1em;
+}
+
+.blockelement {
+  margin: 1em 4em 1em 4em;
+}
+
+figcaption {
+  background-color: black;
+  color: white;
+  max-width: 100%;
+  padding: 1em;
+  font-size: 1em;
+  font-size: 1em;
+  position: relative;
+  bottom: 2.5em;
+}
+
+figure {
+  margin: 1em 1em 1em 1em;
+}
+
+img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/*small screen* --> mobile first!*/
+@media screen and (max-width: 667px) {
+  .section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .flexitem {
+    -ms-flex-preferred-size: 40%;
+        flex-basis: 40%;
+  }
+  .desktoponly {
+    display: none;
+  }
+}
+
+/*big screen*/
+@media screen and (min-width: 668px) {
+  .section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .flexitem {
+    -ms-flex-preferred-size: 29%;
+        flex-basis: 29%;
+  }
+  .mobileonly {
+    display: none;
+  }
+  .doublecontainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .containerleft {
+    -ms-flex-preferred-size: 90%;
+        flex-basis: 90%;
+  }
+  .containerleft .flexitem {
+    -ms-flex-preferred-size: 40%;
+        flex-basis: 40%;
+  }
+  .containerright {
+    -ms-flex-preferred-size: 10%;
+        flex-basis: 10%;
+    padding: 0;
+  }
+}
+
+footer {
+  background-color: #0E0D0D;
+}
+
+footer p {
+  color: white;
+}
+/*# sourceMappingURL=style.css.map */
