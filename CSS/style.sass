@@ -1,76 +1,106 @@
-
-
-
-    
 body 
     font-family: sans-serif
 
+main img 
+    width: 100%
+    object-fit: cover
 
-// Header 
+//////////////
+/// Header ///
+////////////// 
 
 header 
     background-color: #5B191A
 
-@media screen and (max-width: 667px)
-    header 
+/*small screen* --> mobile first!*/
+@media screen and (max-width: 480px)
+    .desktoponly
+        display: none
+
+    header img
+        max-width: 50vw
+        padding: 2em 1em 2em 1em
+    
+/*big screen*/
+@media screen and (min-width: 481px)
+    header > div
         display: flex
+        justify-content: center
+        padding: 2em 1em 2em 1em
+
+    header img 
+        max-height: 100%
+        padding 2em 1em 2em 1em
+
+    #logo
+        width: 100%
+
+    header .flexitem
         flex-basis: 50%
-
-
-
-
-
-// Navigation Bar
+   
+//////////////////////
+/// Navigation Bar ///
+//////////////////////   
+    
 nav
     background-color: #0E0D0D
-    padding: 0.3em
+    padding: 0.1em
 
 li 
     display: inline
+    font-size: 1.5em
+
+ul 
+    padding-inline-start: 0
 
 li a 
     color: white
     text-decoration: none
-    padding-right: 1em
+    padding-right: .4em
+    padding-left: .4em
+   
+
+/*small screen* --> mobile first!*/
+@media screen and (max-width: 480px)
+    ul
+        text-align: center  // --> also valid for the footer, see below
+
 // End of Navigation Bar
-    
+
+
 /////////////////
 /// Main Part ///
 /////////////////
 
-.sectionheadline
+#date 
+    text-align: right
+    //padding-right: 2em
+
+h1
+    font-weight: normal
+    font-size: 150%
     background-color: #C4C4C4
-    padding: 1em 2em 1em 2em
-    margin: 1em 1em 1em 1em
+    padding: 0.2em 0em 0.2em 1em
 
 .blockelement
     margin: 1em 4em 1em 4em
-
-
-/// Flexboxing section 1 ///
 
 figcaption
     background-color: black
     color: white
     max-width: 100%
     padding: 1em
-    font-size: 1em
-    font-size: 1em
+    font-size: small
     position: relative
     bottom: 2.5em
+    text-align: center
 
 figure
     margin: 1em 1em 1em 1em
 
-img 
-    width: 100%
-    object-fit: cover
-    
-
-/// Media Queries ///
 
 /*small screen* --> mobile first!*/
-@media screen and (max-width: 667px) 
+@media screen and (max-width: 480px) 
     .section
         display: flex
         flex-wrap: wrap
@@ -78,62 +108,69 @@ img
 
     .flexitem 
         flex-basis: 40%
-
-    .desktoponly
-        display: none
        
 /*big screen*/
-@media screen and (min-width: 668px) 
+@media screen and (min-width: 481px) 
     .section 
         display: flex
         flex-wrap: wrap
         justify-content: space-around
         
     .flexitem
-        flex-basis: 29%
+        flex-basis: 28%
     
     .mobileonly
         display: none
 
     .doublecontainer
+
         display: flex
-        justify-content: center
+        justify-content: space-between
+
     
     .containerleft
-        flex-basis: 90%
+        flex-basis: 83%
+        flex-shrink: 1
+
     
     .containerleft .flexitem
-        flex-basis: 40%
+        flex-basis: 50%
 
     .containerright
-        flex-basis: 10%
+        flex-basis: 17%
+        flex-grow: 1
         padding: 0
+          
+    .containerright img
+        //height: auto
+        width: 100%
         
 
 
-
-    
-
-
-
-    
-    
-
-
-
-
-    
-
-
-
-
-
-// Footer
+//////////////
+/// Footer ///
+//////////////
 footer 
     background-color: #0E0D0D
+    padding: 0em 1em 1em 1em
 
 footer p 
     color: white
+    text-align: center
 
+/*small screen* --> mobile first!*/
+@media screen and (max-width: 480px)
+    footer img
+        //border: 3px solid red
+        display: block
+        margin: 0 auto 2.5em auto
+        
+/*big screen*/
+@media screen and (min-width: 481px)      
+    footer p
+        padding: 3em 1em 0em 1em
+
+    footer img
+        float: right
 
 // End of Footer
