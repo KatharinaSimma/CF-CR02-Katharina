@@ -2,12 +2,6 @@ body {
   font-family: sans-serif;
 }
 
-main img {
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
 header {
   background-color: #5B191A;
 }
@@ -29,20 +23,29 @@ header {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -ms-flex-line-pack: end;
+        align-content: flex-end;
     padding: 2em 1em 2em 1em;
   }
   header img {
     max-height: 100%;
-  }
-  #logo {
     width: 100%;
   }
-  header .flexitem {
-    -ms-flex-preferred-size: 50%;
-        flex-basis: 50%;
+  header .flexitem1 {
+    -ms-flex-preferred-size: 30%;
+        flex-basis: 30%;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  header .flexitem2 {
+    -ms-flex-preferred-size: 60%;
+        flex-basis: 60%;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
   }
 }
 
@@ -77,6 +80,12 @@ li a {
 
 #date {
   text-align: right;
+}
+
+main img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 h1 {
@@ -167,7 +176,7 @@ figure {
     padding: 0;
   }
   .containerright img {
-    width: 100%;
+    max-width: 100%;
   }
 }
 
