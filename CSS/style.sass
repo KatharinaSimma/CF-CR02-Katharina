@@ -1,7 +1,16 @@
+/* This style sheet is ordered by section.
+/* Media Queries are also sorted by section.*/
+/* Table of Contents:
+    - Body
+    - Navigation Bar
+    - Header
+    - Main 
+    - Footer */ 
+
+// Your feedback is appreciated!  
+    
 body 
     font-family: sans-serif
-
-
 
 //////////////
 /// Header ///
@@ -60,15 +69,11 @@ li a
     text-decoration: none
     padding-right: .4em
     padding-left: .4em
-   
 
 /*small screen* --> mobile first!*/
 @media screen and (max-width: 480px)
     ul
-        text-align: center  // --> also valid for the footer, see below
-
-// End of Navigation Bar
-
+        text-align: center  // --> also valid for the footer
 
 /////////////////
 /// Main Part ///
@@ -76,7 +81,6 @@ li a
 
 #date 
     text-align: right
-    //padding-right: 2em
 
 main img 
     width: 100%
@@ -84,7 +88,7 @@ main img
 
 h1
     font-weight: normal
-    font-size: 150%
+    font-size: 100%
     background-color: #C4C4C4
     padding: 0.2em 0em 0.2em 1em
 
@@ -104,7 +108,6 @@ figcaption
 figure
     margin: 1em 1em 1em 1em
 
-
 /*small screen* --> mobile first!*/
 @media screen and (max-width: 480px) 
     .section
@@ -114,7 +117,7 @@ figure
 
     .flexitem 
         flex-basis: 40%
-       
+    
 /*big screen*/
 @media screen and (min-width: 481px) 
     .section 
@@ -128,16 +131,15 @@ figure
     .mobileonly
         display: none
 
+    //--> Third block of articles to be flexboxed
     .doublecontainer
 
         display: flex
         justify-content: space-between
-
     
     .containerleft
         flex-basis: 83%
         flex-shrink: 1
-
     
     .containerleft .flexitem
         flex-basis: 50%
@@ -146,17 +148,15 @@ figure
         flex-basis: 17%
         flex-grow: 1
         padding: 0
-
           
     .containerright img
         //height: auto
         max-width: 100%
-        
-
 
 //////////////
 /// Footer ///
 //////////////
+
 footer 
     background-color: #0E0D0D
     padding: 0em 1em 1em 1em
@@ -179,5 +179,3 @@ footer p
 
     footer img
         float: right
-
-// End of Footer
